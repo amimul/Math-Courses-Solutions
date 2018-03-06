@@ -16,17 +16,17 @@ Provide counterexamples for those that are false, and supply proofs for those th
 (I shall use \textbf{Proof} and \textbf{Counterexample} to indicate \textbf{True} and \textbf{False} respectively.)  
 \begin{itemize}
 	(a) For any set $A \subseteq \mathbb{R}$, $\overline{A}^c$ is open. \\
-	\textbf{Proof:} By Theorem 3.2.12, we know that $\overline{A}$ is closed, and by Theorem 3.2.13, we know that the compliment of a closed set is an open set and as such we conclude that $\overline{A}^c$ is open since its compliment $\overline{A}$ is closed. \\ 
+	\textbf{Proof:} By Theorem 3.2.12, we know that $\overline{A}$ is closed, and by Theorem 3.2.13, we know that the compliment of a closed set is an open set and as such we conclude that $\overline{A}^c$ is open since its compliment $\overline{A}$ is closed. \\ \\ 
 	(b) If a set $A$ has an isolated point, it cannot be an open set. \\
-	\textbf{Proof:} For $A$ to be an open set then every point $a$ must have an $\epsilon$-neighborhood $V_\epsilon(x) \subseteq A$, but since there exists an $x$ for which $V_\epsilon(x) \cap A = \{x\}$, which means that $V_\epsilon(x) \not\subset A$ and as such, any $\epsilon^{'} \text{ where } 0 < \epsilon^{'} < \epsilon \text{, } V_{\epsilon^{'}}(x) \not\subset A$ thus A is not an open set.  \\  
+	\textbf{Proof:} For $A$ to be an open set then every point $a$ must have an $\epsilon$-neighborhood $V_\epsilon(x) \subseteq A$, but since there exists an $x$ for which $V_\epsilon(x) \cap A = \{x\}$, which means that $V_\epsilon(x) \not\subset A$ and as such, any $\epsilon^{'} \text{ where } 0 < \epsilon^{'} < \epsilon \text{, } V_{\epsilon^{'}}(x) \not\subset A$ thus A is not an open set. \\ \\  
 	(c) A set $A$ is closed if and only if $\overline{A} = A$. \\
 	\textbf{Proof:} $\Rightarrow$ By definition, $A$ is closed if and only if it contains its limits $l \in L$ and as such $\overline{A} = A \cup L = A$. \\
-	$\Leftarrow$ If $\overline{A} = A$ then $A = A \cup L$, i.e. $A$ contains its limits which, by definition, means $A$ is closed. \\ 
+	$\Leftarrow$ If $\overline{A} = A$ then $A = A \cup L$, i.e. $A$ contains its limits which, by definition, means $A$ is closed. \\ \\
 	(d) If $A$ is a bounded set, then $s = \text{sup}A$ is a limit point of $A$. \\
-	\textbf{Proof:} Given that the set $A$ is bounded and by using the Monotone Convergence and the Bolzano-Weierstrass Theorems, we can probably construct a convergent sequence that converges to $s$ and by Theorem 3.2.9 we can conclude that $s$ is indeed a limit point of $A$.\\ 
+	\textbf{Proof:} Given that the set $A$ is bounded and by using the Monotone Convergence and the Bolzano-Weierstrass Theorems, we can probably construct a convergent sequence that converges to $s$ and by Theorem 3.2.9 we can conclude that $s$ is indeed a limit point of $A$.\\ \\ 
 	(e) Every finite set is closed. \\
-	\textbf{Proof:} Suppose we have a limit point $l$ of $A$, by definition, every $V_\epsilon(l)$ must intersect $A$ at a value $a \neq l$. Suppose we have $\epsilon^{'} = min\{|l - a_n|: a_n \in A\}$, we can see that $V_{\epsilon^{'}}(l)$ does not intersect $A$, which leads to a contradicition, thus we can deduce that $A$ has no limit points, i.e. $L = \phi$, and since $\phi \subseteq A$ then $A$ is closed. \\
+	\textbf{Proof:} Suppose we have a limit point $l$ of $A$, by definition, every $V_\epsilon(l)$ must intersect $A$ at a value $a \neq l$. Suppose we have $\epsilon^{'} = min\{|l - a_n|: a_n \in A\}$, we can see that $V_{\epsilon^{'}}(l)$ does not intersect $A$, which leads to a contradicition, thus we can deduce that $A$ has no limit points, i.e. $L = \phi$, and since $\phi \subseteq A$ then $A$ is closed. \\ \\
 	(f) An open set that contains every rational number must necessarily be all of $\mathbb{R}$. \\
 	\textbf{Counterexample:} $(-\infty, x) \cup (x, \infty)$ where $x \not\in \mathbb{Q}$. \\ 
 \end{itemize}
-\end{document}0
+\end{document}
