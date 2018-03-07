@@ -1,0 +1,25 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb}
+\title{\textbf{3.3 Compact Sets}}
+\begin{document}
+\maketitle
+\textbf{Exercise 3.3.2.} Prove the converse of Theorem 3.3.4 by showing that if a set $K \subseteq \mathbb{R}$ is closed and bounded then it is compact. \\
+\textbf{Proof:} We shall assume $K$ is not compact. Consider the sequence $(x_n) \subseteq K$ whose subsequence $(x_{n_k})$ converges to some point $x \not\in K$. Such a sequence cannot exist because $K$ is closed and as such it must contain its limit point $x$ for its converging subsequence $(x_{n_k})$. Because $K$ is bounded then by the Bolzano-Weierstrass Theorem, every sequence in $K$ must contain a converging subsequence. This leads to a contradiction which proves that $K$ must be Compact. \\ \\
+\textbf{Exercise 3.3.3.} Show that the Cantor set defined in Section 3.1 is a compact set. \\
+\textbf{Proof:} The Cantor $C$ is defined as follows:
+			$$C = \bigcap_{a = 0}^\infty C_n$$
+Given that each $C_n$ for some $n \in \mathbb{N}$ is the union of a finite number of closed subsets then $C_n$ is closed for every $n \in \mathbb{N}$. By Theorem 3.2.14 we know that $C$ is closed as well since it is the the result of an arbitrary intersection of closed sets and since it is also bounded, and as such by Theorem 3.3.4, $C$ is compact. \\ \\
+\textbf{Exercise 3.3.7.} Decide whether the following propositions are true or false. If the claim is valid, supply a short proof, and if the claim is false, provide a counterexample.
+\begin{itemize}
+	(a) An arbitrary intersection of compact sets is compact. \\
+	\textbf{Proof:} Consider the collection of compact sets $K = \{K_\lambda : \lambda \in \Lambda \}$. By Theorem 3.3.4, we know that every $K_\lambda$ closed and bounded, and by Theorem 3.2.14 we know that $\bigcap_{\lambda \in \Lambda} K_\lambda$ is also closed. This leaves us with proving that $\bigcap_{\lambda \in \Lambda} K_\lambda$ is also bounded. Consider $k = max\{k_\lambda : k_\lambda = max\{|x| : x \in K_\lambda\}\}$, $[-k, k]$ acts as a bound. Hence, $\bigcap_{\lambda \in \Lambda} K_\lambda$ is both bounded and closed, thus compact. \\ \\
+	(b) Let $A \subseteq \mathbb{R}$ be arbitrary, and let $K \subseteq \mathbb{R}$ be compact. Then the intersection $A \cap K$ is compact. \\
+	\textbf{Counterexample:} Consider $A = (0, 1)$ and $K = [0, 1]$. \\ \\
+	(c) If $F_1 \supseteq F_2 \supseteq F_3 \cdots$ is a nested sequence of nonempty closed sets, then the intersection $\bigcap_{n = 1}^\infty F_n \neq \phi$. \\
+	\textbf{Counterexample:} Consider $F_n = [n, \infty)$, each $F_n$ is closed yet their intersection is empty. \\ \\
+	(d) A finite set is always compact. \\
+	\textbf{Proof:} As was proven before, every finite set is closed, and since the set is trivially bounded, then by the Heine-Borel Theorem we the set is compact. \\ \\
+	(e) A countable set is always compact. \\
+	\textbf{Counterexample:} The countable set of rational numbers $\mathbb{Q}$. \\
+\end{itemize}
+\end{document}
