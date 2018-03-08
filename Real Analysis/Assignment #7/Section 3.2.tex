@@ -4,30 +4,30 @@
 \begin{document}
 \maketitle
 \textbf{Exercise 3.2.4.} Prove that the converse of Theorem 3.2.5 by showing that if $x = \lim_{n \to \infty}a_n$ for some sequence $\{ a_n \}$ contained in $A$ satisfying $a_n \neq x$, then $x$ is a limit point of $A$.  \\
-\textbf{Proof:} since $a_n$ is a converging sequence in $A$ then for any $\epsilon > 0$ there exists an $N \in \mathbb{N}$ s.t. for any $n \geq N, \; |a_n - x| < \epsilon$ and as such $a_n \in V_\epsilon(x)$ for any $\epsilon > 0$ and since $a_n \neq x$ by assumption, then x is a limit point of $A$ by Definition 3.2.4. \\ \\
-\textbf{Exercise 3.2.8.} Given $A \subseteq \mathbb{R}$, let $L$ be the set of all limit points of $A$. 
+\textbf{Proof:} Since $a_n$ is a converging sequence in $A$ then for any $\epsilon > 0$ there exists an $N \in \mathbb{N}$ s.t. for any $n \geq N, \; |a_n - x| < \epsilon$ and as such $a_n \in V_\epsilon(x)$ for any $\epsilon > 0$ and since $a_n \neq x$ by assumption, then x is a limit point of $A$ by Definition 3.2.4. \\ \\
+\textbf{Exercise 3.2.8.} Given $A \subseteq \mathbb{R}$, let $L$ be the set of all limit points of $A$.
 \begin{itemize}
 	(a) Show that the set $L$ is closed. \\
-	\textbf{Proof:} Let $L$ be the set of limit points of $A$, and suppose that $x$ is a limit point of $L$, we want to show that $x$ is an element of $L$; in other words, that $x$ is a limit point of $A$. Let $V_\epsilon(x)$ be arbitrary. By the definition of a limit point, $V_\epsilon(x)$ intersects $L$ at a point $l \in L$, where $l \neq x$. Now choose $\epsilon^{'} > 0$ small enough so that $V_{\epsilon^{'}}(l) \subseteq V_\epsilon(x)$. Since $l \in L$, $l$ is a limit point of $A$ and so $V_{\epsilon^{'}}(l)$ intersects $A$. This implies $V_\epsilon(x)$ intersects $A$ at a point different than $x$, and therefore $x$ is a limit point of $A$ and thus an element of $L$.\\ \\
+	\textbf{Proof:} Let $L$ be the set of limit points of $A$, and suppose that $x$ is a limit point of $L$, we want to show that $x$ is an element of $L$; in other words, that $x$ is a limit point of $A$. Let $V_\epsilon(x)$ be arbitrary. :By the definition of a limit point, $V_\epsilon(x)$ intersects $L$ at a point $l \in L$, where $l \neq x$. Now choose $\epsilon^{'} > 0$ small enough so that $V_{\epsilon^{'}}(l) \subseteq V_\epsilon(x)$. Since $l \in L$, $l$ is a limit point of $A$ and so $V_{\epsilon^{'}}(l)$ intersects $A$. This implies $V_\epsilon(x)$ intersects $A$ at a point different than $x$, and therefore $x$ is a limit point of $A$ and thus an element of $L$.\\ \\
 	(b) Argue that if $x$ is a limit point of $A \cup L$, then $x$ is a limit point of $A$. Use this observation to fernish a proof for Theorem 3.2.12. \\
 	\textbf{Proof:} By definition, $x$ is either a limit point of $A$ or $L$. If $x$ is a limit point of $A$, then we're done, but if $x$ is a limit of $L$ we use the same argument employed above to prove that $x$ is a limit of $A$. We can now conclude that $A \cup L$ does not produce any new limits $x \notin A$. \\
 \end{itemize}
 \textbf{Exercise 3.2.12.} Decide whether the following statements are true or false. \\
 Provide counterexamples for those that are false, and supply proofs for those that are true. \\
-(I shall use \textbf{Proof} and \textbf{Counterexample} to indicate \textbf{True} and \textbf{False} respectively.)  
+(I shall use \textbf{Proof} and \textbf{Counterexample} to indicate \textbf{True} and \textbf{False} respectively.)
 \begin{itemize}
 	(a) For any set $A \subseteq \mathbb{R}$, $\overline{A}^c$ is open. \\
-	\textbf{Proof:} By Theorem 3.2.12, we know that $\overline{A}$ is closed, and by Theorem 3.2.13, we know that the compliment of a closed set is an open set and as such we conclude that $\overline{A}^c$ is open since its compliment $\overline{A}$ is closed. \\ \\ 
+	\textbf{Proof:} By Theorem 3.2.12, we know that $\overline{A}$ is closed, and by Theorem 3.2.13, we know that the compliment of a closed set is an open set and as such we conclude that $\overline{A}^c$ is open since its compliment $\overline{A}$ is closed. \\ \\
 	(b) If a set $A$ has an isolated point, it cannot be an open set. \\
-	\textbf{Proof:} For $A$ to be an open set then every point $a$ must have an $\epsilon$-neighborhood $V_\epsilon(x) \subseteq A$, but since there exists an $x$ for which $V_\epsilon(x) \cap A = \{x\}$, which means that $V_\epsilon(x) \not\subset A$ and as such, any $\epsilon^{'} \text{ where } 0 < \epsilon^{'} < \epsilon \text{, } V_{\epsilon^{'}}(x) \not\subset A$ thus A is not an open set. \\ \\  
+	\textbf{Proof:} For $A$ to be an open set then every point $a$ must have an $\epsilon$-neighborhood $V_\epsilon(x) \subseteq A$, but since there exists an $x$ for which $V_\epsilon(x) \cap A = \{x\}$, which means that $V_\epsilon(x) \not\subset A$ and as such, any $\epsilon^{'} \text{ where } 0 < \epsilon^{'} < \epsilon \text{, } V_{\epsilon^{'}}(x) \not\subset A$ thus A is not an open set. \\ \\
 	(c) A set $A$ is closed if and only if $\overline{A} = A$. \\
 	\textbf{Proof:} $\Rightarrow$ By definition, $A$ is closed if and only if it contains its limits $l \in L$ and as such $\overline{A} = A \cup L = A$. \\
 	$\Leftarrow$ If $\overline{A} = A$ then $A = A \cup L$, i.e. $A$ contains its limits which, by definition, means $A$ is closed. \\ \\
 	(d) If $A$ is a bounded set, then $s = \text{sup}A$ is a limit point of $A$. \\
-	\textbf{Proof:} Given that the set $A$ is bounded and by using the Monotone Convergence and the Bolzano-Weierstrass Theorems, we can probably construct a convergent sequence that converges to $s$ and by Theorem 3.2.9 we can conclude that $s$ is indeed a limit point of $A$.\\ \\ 
+	\textbf{Proof:} Given that the set $A$ is bounded and by using the Monotone Convergence and the Bolzano-Weierstrass Theorems, we can probably construct a convergent sequence that converges to $s$ and by Theorem 3.2.9 we can conclude that $s$ is indeed a limit point of $A$.\\ \\
 	(e) Every finite set is closed. \\
 	\textbf{Proof:} Suppose we have a limit point $l$ of $A$, by definition, every $V_\epsilon(l)$ must intersect $A$ at a value $a \neq l$. Suppose we have $\epsilon^{'} = min\{|l - a_n|: a_n \in A\}$, we can see that $V_{\epsilon^{'}}(l)$ does not intersect $A$, which leads to a contradicition, thus we can deduce that $A$ has no limit points, i.e. $L = \phi$, and since $\phi \subseteq A$ then $A$ is closed. \\ \\
 	(f) An open set that contains every rational number must necessarily be all of $\mathbb{R}$. \\
-	\textbf{Counterexample:} $(-\infty, x) \cup (x, \infty)$ where $x \not\in \mathbb{Q}$. \\ 
+	\textbf{Counterexample:} $(-\infty, x) \cup (x, \infty)$ where $x \not\in \mathbb{Q}$. \\
 \end{itemize}
 \end{document}
