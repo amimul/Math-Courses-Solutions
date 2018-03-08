@@ -1,0 +1,12 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb}
+\title{\textbf{3.4 Perfect Sets and Connected Sets}}
+\begin{document}
+\maketitle
+\textbf{Exercise 3.4.6.} Prove that a set $E \subseteq \mathbb{R}$ is connected iff, for all nonempty disjoint sets $A$ and $B$ satisfying $E = A \cup B$, there always exists a convergent sequence $(x_n) \to x$ with $(x_n)$ contained in one of $A$ or $B$, and $x$ an element of the other. \\
+\textbf{Proof:} $\Rightarrow$ Assume $E$ is connected. Since $E$ is connected this means that $\overline{A} \cap B \neq \phi$ with $A \neq \overline{A}$, otherwise that'll lead to a contradiciton. This means that $B$ contains at least one of $A$'s limit points $x \not\in A$, thus we can always find a convergent sequence $(x_n) \subseteq A$ s.t. $(x_n) \to x$, thus completing the proof in one direction. \\
+$\Leftarrow$ Assume $(x_n) \to x$ is a convergent sequence in $A$ with $x \in B$. Because $x$ is a limit point of $A$, then we have $x \in \overline{A}$. Since $x \in B$, then $\overline{A} \cap B = x \neq \phi$. Hence, $E$ is connected, completing the proof in the other direction. \\ 
+The proof works just as well if we swap $A$ and $B$, thus completing the proof. \\ \\
+\textbf{Exercise 3.4.7.} (a) Find an example of a disconnected set whose closure is connected. \\ 
+\textbf{Example:} Any set of the form $S = (a, b) \cup (b, c)$ will do. 
+\end{document}
