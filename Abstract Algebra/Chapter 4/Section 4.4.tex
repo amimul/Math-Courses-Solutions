@@ -1,0 +1,16 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb}
+\title{\textbf{Automorphisms}}
+\begin{document}
+	\maketitle
+	\textbf{Exercise 4.4.1.} If $\sigma \in \text{Aut}(G)$ and $\varphi_g$ is a conjugation by $g$ prove $\sigma \varphi_g \sigma^{-1} = \varphi_{\sigma(g)}$. Deduce that $\text{Inn}(G) \trianglelefteq \text{Aut}(G)$. (The group $\text{Aut}(G)/\text{Inn}(G)$ is called the \textit{outer automorphism group} of G.) \\ \\
+	\textbf{Proof:} For any $x \in G$ we have $\sigma \varphi_g \sigma^{-1} = \sigma gxg^{-1} \sigma^{-1} = (\sigma(g)) x (\sigma(g))^{-1} = \varphi_{\sigma(g)}$. Now, since we've proved that for any $\sigma \in \text{Aut}(G) \text{ we have } \sigma \varphi_g \sigma^{-1} = \varphi_{\sigma(g)} \in \text{Inn(G)}$ and since $\text{Inn}(G) = \{\varphi_g | \text{ for all } g \in G\}$, then, by the definition of a normal subgroup, $\text{Inn}(G) \trianglelefteq \text{Aut}(G)$. \\ \\ 
+	\textbf{Exercise 4.4.3.} Prove that under any automorphism of $D_8$, $r$ has at most 2 possible images and $s$ has at most 4 possible images ($r$ and $s$ are the usual generators). Deduce that $|\text{Aut}(D_8)| \leq 8$. \\ \\
+	\textbf{Proof:} We start by recalling that $|r| = 4$ and since an isomorphism must preserve the order of an element, then the only possible images of an automorphism $\sigma$ are the 2 images $r$ and $r^3$. \\
+	For $s$ there are 5 elements of its order, but we notice that for any automorphism $\sigma$ we have $\sigma(r^2) = \sigma(r)^2$ which either equals $(r)^2 = r^2$ or $(r^3)^2 = r^6 = r^2$ as we've established from the possible images of $r$, thus $\sigma(s) \neq r^2$ since it's 1-to-1, which leads us to conclude that there are only 4 possible images for $s$ at most. \\ 
+	We thus conclude that there are at most $2 \cdot 4 = 8$ possiblities for $\sigma$, that is $|\text{Aut}(D_8)| \leq 8$.\\ \\ 
+	\textbf{Exercise 4.4.5.} Use the fact that $D_8 \trianglelefteq D_{16}$ to prove that $\text{Aut}(D_8) \cong D_8$. \\ \\
+	\textbf{Proof:} By Collary 15 we have $G \cong N_{D_{16}}(D_8)/C_{D_{16}}(D_8)$ where $G \leq \text{Aut}(D_8)$. Since we know that $D_8 \trianglelefteq D_{16}$ then $N_{D_{16}}(D_8) = D_{16}$, and since it is easy to see that $C_{D_{16}}(D_8) = Z(D_{16}) = \langle r^4 \rangle$, we deduce that $G \cong D_{16}/Z(D_{16})$ which is of order $\frac{|D_{16}|}{|Z(D_{16})|} = \frac{16}{2} = 8$, and since we've deduced that $|\text{Aut}(D_8)| \leq 8$ we see that $G = \text{Aut}(D_8)$. \\
+	Now, we need to show that $D_8 \cong D_{16}/Z(D_{16})$. We start by noting that for any $d^{'} \in D_{16}$ we either have $d^{'} = d \text{ or } d^{'} = dr^4$ for some $d \in D_8$ and that $dr^4 \langle r^4 \rangle = d \langle r^4 \rangle$. We now construct a homomorphism $\varphi : D_{16}/Z(D_{16}) \to D_8$ s.t. $d \langle r^4 \rangle \to d$, it is easy to see that it's well defined and bijective, thus we conclude that $D_{16}/Z(D_{16}) \cong D_8$. \\
+	Since $\text{Aut}(D_8) \cong D_{16}/Z(D_{16}) \cong D_8$ we have $\text{Aut}(D_8) \cong D_8$.
+\end{document}
