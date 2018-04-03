@@ -1,0 +1,12 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb}
+\title{\textbf{4.5 Sylow's Theorem}}
+\begin{document}
+	\maketitle
+	\textbf{Exercise 4.5.8:} Exhibit two distinct Sylow 2-subgroups of $S_5$ and an element of $S_5$ that conjugates one into the other. \\ \\
+	\textbf{Answer:} We take $\langle(1234)(13)\rangle$ and $\langle(2345)(35)\rangle$ as the wanted Sylow 2-subgroups and conjugating one of them by $(15)$ yields the other. \\ \\
+	\textbf{Exercise 4.5.13:} Prove that a group of order 56 has a normal Sylow $p$-subgroup for some $p$ dividing its order. \\ \\
+	\textbf{Proof:} We first note that $56 = 2^3 \cdot 7$. Suppose $n_7 = 1$, then the Sylow 7-subgroup is the normal subgroup we desire. Now suppose $n_7 \neq 1$, $n_7 \;|\; 8$ and $n_7 \equiv 1 \text{ mod } 7$, then $n_7 = 8$. We note that each of the 8 distinct Sylow 7-supgroups contains 6 elements of order 7 while having the identity element in common, i.e., the number of elements of order 7 is $6 \cdot 8 = 48$, this leaves us with 7 unaccounted for elements and the identity. Now $n_2 \;|\; 7$ and $n_2 \equiv 1 \text{ mod } 2$, this means either $n_2 = 1$ or $n_2 = 7$. Since we proved that there are only 7 elements not in any of the Sylow 7-subgroups and the identity exists in any of the $Syl_2(G)$ elements and since each Sylow 2-subgroup contains 8 elements, then we can deduce that $n_2 = 1$, i.e., the Sylow 2-subgroup is normal in $G$ completing the proof. \\ \\
+	\textbf{Exercise 4.5.30:} How many elements of order 7 must there be in a simple group of order 168? \\ \\
+	\textbf{Answer:} We first note that $168 = 7 \cdot 24$. Since $G$ is simple, then $n_7 \neq 1$ and since $n_7 \;|\; 24$ and $n_7 \equiv 1 \text{ mod } 7$, then $n_7 = 8$. Since we have 8 Sylow 7-subgroups with the maximum power of 7 being 1, then the number of elements of order 7 is $8 \cdot 6 = 48$.
+\end{document}
