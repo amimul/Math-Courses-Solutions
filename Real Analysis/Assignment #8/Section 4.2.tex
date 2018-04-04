@@ -1,0 +1,24 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb}
+\title{\textbf{4.2 Functional Limits}}
+\begin{document}
+	\maketitle
+	\textbf{Exercise 4.2.1.} Use Definition 4.2.1 to supply a proof for the following statements.
+	\begin{itemize}
+		\textbf{a)} $\lim_{x \to 2}(2x + 4) = 8$ \\
+		\textbf{Proof:} Let $\epsilon, \delta > 0$. Notice that $|f(x) - 8| = |2x + 4 - 8| = |2x - 4| = 2|x - 2|$. If we let $\delta = \frac{\epsilon}{2}$, then $0 < |x - 2| < \delta$ implies that $|f(x) - 8| < \epsilon$. \\ \\
+		\textbf{b)} $\lim_{x \to 2}x^3 = 8$. \\
+		\textbf{Proof:} Let $\epsilon, \delta > 0$. Notice that $|f(x) - 8| = |x^3 - 8| = |x - 2||x^2 + 2x + 4|$. We can make $|x - 2|$ as small as we want, but we can't do so with $|x^2 + 2x + 4|$ and as such we need to come up with an upper bound. Fix the maximum radius of the $\delta$-neighborhood to be 1, the upper bound for the $|x^2 + 2x + 4|$ in that case is 19. Now, choose $\delta = \text{min}\{1, \frac{\epsilon}{19}\}$. If $0 < |x - 2| < \delta$, then $|x^3 - 8| = |x - 2||x^2 + 2x + 4| < \frac{\epsilon}{19}19 = \epsilon$.
+	\end{itemize}
+	\textbf{Exercise 4.2.3.} Use Collary 4.2.5 to show that each of the following limits does not exist.
+	\begin{itemize}
+		\textbf{b)} $\lim_{x \to 1}g(x)$ where $g$ is Dirichlet's function from Section 4.1. \\
+		\textbf{Proof:} Consider the sequences $(x_n)$ and $(y_n)$ where $x_n = \frac{n - 1}{n}$ and $y_n = \sqrt[n]{2}$, it is easy to see that both converge to 1. By definition $x_n \in \mathbb{Q}$ for every $n \in \mathbb{N}$. \\
+		Now we prove that for every $y_n \not \in \mathbb{Q}$ for every $n \in \mathbb{N}$. Suppose that $\sqrt[n]{2} = \frac{p}{q}$ where $p,q \in \mathbb{N}$ and co-prime, then $2q^n = p^n$ which implies that $p^n$ is even and thus so is $p$, we write $p = 2c$ and now $2q^n = 2^n c^n$, thus $q^n = 2^{n - 1}c^n$ which leads to a contradiction since $p$ and $q$ are supposed to be coprime. \\
+		Now we have two sequences where the every element of the first one is a rational while every element of the other is irrational and both converge to 1, thus it is easy to see that $\lim_{x_n \to 1}g(x_n) = 1 \neq 0 = \lim_{y_n \to 1}g(y_n)$. By Collary 4.2.5, the limit does not exist.
+	\end{itemize}
+	\textbf{Exercise 4.2.6.} Let $g : A \to \mathbb{R}$ and assume that $f$ is a bounded function on $A \subseteq \mathbb{R}$(i.e., there exists $M > 0$ satisfying $|f(x)| \leq M$ for all $x \in A$). Show that if $\lim_{x \to c}g(x) = 0$, then $\lim_{x \to c}g(x)f(x) = 0$ as well. \\ \\
+	\textbf{Proof:} We have an $M > 0$ where $|f(x)| \leq M$ for all $x \in A$. Let $\epsilon > 0$ be arbitrary, since we have $\lim_{x \to c}g(x) = 0$ then there exists a $\delta > 0$ s.t. $|g(x) - 0| = |g(x)| < \frac{\epsilon}{M}$ whenever $0 < |x - c| < \delta$, thus,
+	$$|g(x)f(x)| = |g(x)||f(x)| < \frac{\epsilon}{M}M = \epsilon$$ 
+	whenever $0 < |x - c| < \delta$ which proves that $\lim_{x \to c}g(x)f(x) = 0$. 
+\end{document}
