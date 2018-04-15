@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb}
+\title{\textbf{4.3 Combinations of Continuous Functions}}
+\begin{document}
+	\maketitle
+	\textbf{Exercise 4.3.2. a)} Supply a proof for Theorem 4.3.9 using $\epsilon-\delta$ characterization of continuity. \\ \\
+	\textbf{Proof:} Since $g$ is continuous at $f(c)$, then for any $\epsilon > 0$ there exists a $\delta_f > 0$ s.t. $|y - f(c)| < \delta_f$ implies $|g(y) - g(f(c))| < \epsilon$. Now, since $f$ is continuous at $c$, for this $\delta_f$, there exists a $\delta > 0$ s.t. $|x - c| < \delta$ implies $|f(x) - f(c)| < \delta$, thus for any $\epsilon > 0$ there exists a $\delta > 0$ s.t. $|x - c| < \delta$ implies $|g(f(x)) - g(f(c))| < \epsilon$. We conclude that $g \circ f$ is indeed continuous at $c$. \\ \\
+	\textbf{b)} Give another proof of this theorem using the sequential characterization of continuity (from Theorem 4.3.2 (iv)). \\ \\
+	\textbf{Proof:} Assume $(x_n) \to c$. Since $f$ is continuous at $c$, then $f(x_n) \to f(c)$. Now, since $g$ is continuous at $f(c)$ and $f(x_n) \to f(c)$, then $g(f(x_n)) \to g(f(c))$. Therefore, $g \circ f$ is continuous at $c$. \\ \\
+	\textbf{Exercise 4.3.4. a)} Show using Definition 4.3.1 that any function $f$ with domain $\mathbb{Z}$ will necessarily be continuous at every point in its domain. \\ \\
+	\textbf{Proof:} \ For all $\epsilon > 0$ take the point $c \in \mathbb{N}$. Now, consider $\delta = 1$, we note that the only $x$ satisfying $|x - c| < \delta$ is $x = c$, thus $|f(x) - f(c)| = 0 < \epsilon$. By Theorem 4.3.1 (i), $f$ is convergent at every point $x \in \mathbb{Z}$. \\ \\
+	\textbf{b)} Show in general that if $c$ is an isolated point of $A \subseteq \mathbb{R}$, then $f : A \to \mathbb{R}$ is continuous at $c$. \\ \\
+	\textbf{Proof:} Given that $c$ is an isolated point of $A$, then there exists a $\delta$-neighborhood $V_{\delta}(c)$ that intersects $A$ at $c$ only. Thus, trivially, any point $x \in V_{\delta}(c) \cap A$ implies that $x = c$ and thus $f(x) = f(c) \in V_{\epsilon}(f(c))$. By Theorem 4.3.2 (iii), we deduce that $f$ is continuous at $c$. \\ \\
+	\textbf{Exercise 4.3.7.} Assume $h : \mathbb{R} \to \mathbb{R}$ is continuous on $\mathbb{R}$ and let $K = \{ x : h(x) = 0 \}$. Show that $K$ is a closed set. \\ \\
+	\textbf{Proof:} Suppose $c$ is a limit point of $K$, then there exists a sequence $(x_n) \to c$ in $K$. Now, since $(x_n) \in K$, then $h(x_n) = 0$. Since $h$ is continuous, then $\lim h(x_n) = h(c)$. We finish by noting that $h(x_n) = 0$ for all $x_n$ implies that $\lim h(x_n) = 0$, thus $\lim h(c) = \lim h(x_n) = 0$, from which we can deduce that $c \in K$ as desired. \\ \\
+	\textbf{Exercise 4.3.12.} Let $C$ be the Cantor set constructed in Section 3.1. Define $g : [0, 1] \to \mathbb{R}$ by
+	$$g(x) = \[
+		\begin{cases}
+			1 & x \in C \\
+			0 & x \not \in C.
+		\end{cases} 
+	\]$$
+	\begin{itemize}
+		\textbf{a)} Show that $g$ fails to be continuous for any point $c \in C$. \\
+		\textbf{Proof:} Fix $c \in C$. Now, take the converging sequence $(x_n)$ where $x_n = \frac{c}{\sqrt[n]{2}}$ where each $x_n \not \in C$. Since $(\frac{1}{\sqrt[n]{2}}) \to 1$ and, by the Algebraic Limit Theorem, $\lim c \cdot (\frac{1}{\sqrt[n]{2}}) = c \cdot 1 = c$, then this sequence converges to $c$, yet $\lim g(x_n) \neq g(c)$, thus $g(x)$ is not continuous at any $c \in C$. \\ \\
+		\textbf{b)} Prove that $g$ is continuous at every point $c \not \in C$.\\
+		\textbf{Proof:} Fix $c \not \in C$ and let $\epsilon$ be arbitrary. Since $C$ is closed then $C^c$ is open, thus there exists a $\delta$ where $V_\delta(c) \subseteq C^c$. Now, consider $x \in V_\delta(c)$, then $x \in C^c$ implies that $g(x) \in V_\epsilon(g(c))$. Now, by Theorem 4.3.2 (iii), we see that $x \in V_\delta(c)$ implies that $g(x) \in V_\epsilon(g(c))$, thus $g$ is continuous at every $c \in C^c$.
+	\end{itemize}
+\end{document}
