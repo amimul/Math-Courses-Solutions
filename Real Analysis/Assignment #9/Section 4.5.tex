@@ -1,0 +1,23 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb}
+\title{\textbf{4.5 The Intermediate Value Theorem}}
+\begin{document}
+	\maketitle
+	\textbf{Exercise 4.5.3.} Is there a continuous function on all of $\mathbb{R}$ with range $f(\mathbb{R}) = \mathbb{Q}$? \\ \\
+	\textbf{Answer:} No, $\mathbb{Q}$ is not connected. If the function had $1$ and $2$ in its domain, then by the IVT, its range must contain $\sqrt{2}$ (or any other irrational point.). \\ \\
+	\textbf{Exercise 4.5.4.} A function $f$ is increasing on $A$ if $f(x) < f(y)$ for all $x < y$ in A. Show that the IVT does have a converse if we assume $f$ is increasing on $[a, b]$. \\ \\
+	\textbf{Proof:} We want to show that this function is continuous given that it satisfies the IVP. Since $f$ is increasing. then we have $f(a) < f(c)$. If $f(c) - \epsilon < f(a)$, then set $x_1 = a$, if $f(c) - \epsilon \leq f(a)$, then, by the IVP, we know that there exists a $x_1 < c$ s.t $f(x_1) = f(c) - \epsilon$. In either case we have for $x \in (x_1, c]$
+		$$f(c) - \epsilon \leq f(x_1) \leq f(x) \leq f(c)$$
+	In a similar fashion we can find $x_2 > c$, s.t. for $x \in [c, x_2)$ we have
+		$$f(c) \leq f(x) \leq f(x_2) \leq f(c) + \epsilon$$
+	Now we choose $\delta = \min[c - x_1, x_2 - c]$, we thus have
+		$$|x - c| < \delta \Longrightarrow |f(x) - f(c)| < \epsilon$$
+	We can thus conclude that $f$ is continuous and as such the converse is true. \\ \\
+	\textbf{Exercise 4.5.5.} Finish the proof of the IVT using the AoC started previously.\\ \\
+	\textbf{Proof:} Suppose $f(c) > 0$. Set $\epsilon_0 = f(c)$, then the continuity of $f$ implies that there exists a $\delta_0$ for which $x \in V_{\delta_0}(c)$ implies $f(x) \in V_{\epsilon_0}(c)$, but that in turn implies that $f(x) > 0$ and thus $x \not \in K$ for all $x \in V_{\delta_0}(c)$. This means that if $c$ is an upper bound on $K$, then $c - \epsilon$ is a smaller upper bound, which violates the defintion of a supremum, thus $f(c) \not > 0$. \\
+	Now, suppose $f(c) < 0$. The continuity of $f$ allows to construct a neighborhood $V_{\delta_0}(c)$ where $x \in V_{\delta_0}(c)$ implies $f(x) <  0$. But this implies that there exists a point s.t. $c + \frac{\delta}{2}$ is an element of K, violating the fact that $c$ is an upper bound for $K$. Thus, $f(c) < 0$ is impossible. \\
+	We conclude that $f(c) = 0$ as desired. \\ 
+	This proves the IVT for the the special case $L = 0$. To prove the more general version, we use an auxiliary function $h(x) = f(x) - L$. We know that $h(c) = 0$ for some $c \in (a, b)$ from which it follows that $f(c) = L$. \\ \\
+	\textbf{Exercise 4.5.7.} Let $f$ be a continuous function on a closed interval $[0, 1]$ with range also contained in $[0, 1]$. Prove that $f$ must have a fixed point; that is, show that $f(x) = x$ for at least one value $x \in [0, 1]$. \\ \\
+	\textbf{Proof:} We start by constructing an auxiliary function $g(x) = f(x) - x$. Now, since the range of $f$ is contained in $[0, 1]$, then $g(0) = f(0) \geq 0$ and $g(1) = f(1) - 1 \leq 0$. By the IVT, we can find an $x$ s.t. $g(x) = 0$, which completes the proof.
+\end{document}

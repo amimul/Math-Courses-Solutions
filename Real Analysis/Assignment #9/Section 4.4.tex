@@ -1,0 +1,27 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb}
+\title{\textbf{4.4 Continuous Functions on Compact Sets}}
+\begin{document}
+	\maketitle
+	\textbf{Exercise 4.4.2.} Show that $f(x) = \frac{1}{x^2}$ is uniformly continuous on the set $[1, \infty)$ but not on the set $(0, 1]$. \\ \\
+	\textbf{Proof:} First, we start by noting that 
+	$$|f(x) - f(y)| = \frac{1}{x^2} - \frac{1}{y^2} = |x - y|\left(\frac{x + y}{x^2y^2}\right)$$
+	If we only consider the case where $x, y \leq 1$, then we have 
+	$$\frac{x + y}{x^2y^2} = \frac{1}{xy^2} + \frac{1}{x^2y} \leq 1 + 1 = 2$$
+	Now, for any $\epsilon > 0$, we choose $\delta = \frac{\epsilon}{2}$. We can now see that $|x - y| < \delta$ implies that $|f(x) - f(y)| < \epsilon$ independet of the values of $x, y$, thus $f$ is continuously uniform on $[1, \infty)$. \\
+	If we consider the case where $x, y$ can get arbitrarily close to zero, then the expression $\frac{x + y}{x^2y^2}$ gets is unbounded which causes problems. To see this issue more clearly, we set $x_n = \frac{1}{\sqrt{n}}$ and $y_n = \frac{1}{\sqrt{n + 1}}$. Now, while $|x_n - y_n| \to 0$, it is easy to see that $|f(x_n) - f(y_n)| = |n - (n + 1)| = 1$. Thus, by Theorem 4.4.6, we conclude that $f$ is not uniformly continuous on $(0, 1]$. \\ \\
+	\textbf{Exercise 4.4.4.} Show that if $f$ is continuous on $[a, b]$ with $f(x) > 0$ for all $a < x < b$, then $\frac{1}{f}$ is bounded on $[a, b]$. \\ \\
+	\textbf{Proof:} Since $[a, b]$ is compact, then, by the Extreme Value Theorem, $f$ has a minimum and maximum value $f(x_1), f(x_2)$ respectively. Now, since $f(x) > 0$, then 0 can be used as the lower bound of $\frac{1}{f}$ and the upper bound would be $\frac{1}{f(x_1)}$. Thus, $\frac{1}{f}$ is bounded on $[a, b]$. \\ \\
+	\textbf{Exercise 4.4.6.} Give an example of each of the following, or state that such a request is impossible. For any that are impossible, provide a short explanation (Perhaps referencing the appropriate theorem(s)) for why this is the case.
+	\begin{itemize}
+		\textbf{a)} A continuous function $f : (0, 1) \to \mathbb{R}$ and a Cauchy sequence $(x_n)$ such that $f(x_n)$ is not a Cauchy sequence. \\ \\
+		\textbf{Example:} Take $f(x) = \frac{1}{x}$ and $x_n = \frac{1}{n}$, then we have $f(x_n) = n$. \\ \\
+		\textbf{b)} \A continuous function $f : [0, 1] \to \mathbb{R}$ and a Cauchy sequence $(x_n)$ such that $f(x_n)$ is not a Cauchy sequence. \\ \\
+		\textbf{Proof of non-existence:} Given that $[a, b]$ is closed then any Cauchy sequence $(x_n) \in [a, b]$ converges to some limit $x \in [a, b]$. Now, since we have $f(x)$ continuous on $[a, b]$, then, by definition of a continuous function, $f(x) = \lim f(x_n)$. Since $f(x_n)$ converges, then $f(x_n)$ is also Cauchy. \\ \\
+	\end{itemize}
+	\textbf{Exercise 4.4.11 (Topological Characterization of Continuity).} Let $g$ be defined on all of $\mathbb{R}$. If $A$ is a subset of $\mathbb{R}$, define the set $g^{-1}(A)$ by
+		$$g^{-1}(A) = \{x \in \mathbb{R} : g(x) \in A\}$$
+	Show that $g$ is continuous if and only if and only if $g^{-1}(O)$ is open whenever $O \subseteq \mathbb{R}$ is an open set. \\ \\
+	\textbf{Proof:} $\Longrightarrow$ Assume $g$ is continuous and we have $O$ in the range of $g$ that is an open set. We take $c \in g^{-1}(O)$. Now, since $g(c) \in O$ then there's an $\epsilon$ for which $V_\epsilon(g(c)) \subseteq O$. By the continuity of $g$ we can see that there exists a $V_\delta(c)$ which has the property of $x \in V_\delta(c)$ implies that $g(x) \in V_\epsilon(g(c)) \subseteq O$, which in turn implies that $V_\delta(c) \subseteq g^{-1}(O)$, proving that $g^{-1}(O)$ is open. \\
+	$\Longleftarrow$ Assume that $g^{-1}(O)$ and $O$ are open. Fix some $c \in g^{-1}(O)$. Now, since $g^{-1}(O)$ is open, then there exists a $V_\delta(c) \subseteq g^{-1}(O)$. Let $\epsilon > 0$ and let $V_\epsilon(c) = O$. We now have $g(x) \in O = V_\epsilon(c)$ for any $x \in V_\delta(c)$, thus $g$ is continuous, which completes the proof.
+\end{document}
