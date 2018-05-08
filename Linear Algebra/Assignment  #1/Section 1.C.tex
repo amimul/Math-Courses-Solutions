@@ -1,0 +1,35 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb}
+\title{\textbf{1.C Subspaces}}
+\begin{document}
+	\maketitle
+	\textbf{Exercise 1.C.1.} For each of the following, determine whether it is a subspace of $\mathbb{F}^3$:
+	\begin{itemize}
+		\textbf{a)} $\{(x_1, x_2, x_3) \in \mathbb{F}^3 : x_1 + 2x_2 + 3x_3 = 0\}$. \\
+		\textbf{Answer:} We'll name this subset $U$. $\mathbf{0} \in U$. For any scalar $k \in F$, we have $ku = k(x_1, x_2, x_3) = (kx_1, kx_2, kx_3)$, we can thus see that $kx_1 + 2kx_2 + 3kx_3 = k(x_1 + 2x_2 + 3x_3) = 0$, thus $U$ is closed under scalar multiplication. Now, take $u_1, u_2 \in U$. We can see that $(x_{1, 1} + x_{1, 2}) + 2(x_{2, 1} + x_{2, 2}) + 3(x_{3, 1} + x_{3, 2}) = (x_{1, 1} + 2x_{2, 1} + 3x_{3, 1}) + (x_{1, 2} + 2x_{2, 2} + 3x_{3, 2}) = 0 + 0 = 0$, where $u_1 = (x_{1, 1}, x_{2, 1}, x_{3, 1})$ and $u_2 = (x_{1, 2}, x_{2, 2}, x_{3, 2})$, thus $U$ is closed under addition and as such it is a subspace. \\
+		\textbf{b)} $\{(x_1, x_2, x_3) \in \mathbb{F}^3 : x_1 + 2x_2 + 3x_3 = 4\}$. \\
+		\textbf{Answer:} No, since $(0, 0, 0)$ is not in this subspace.
+	\end{itemize}
+	\textbf{Exercise 1.C.4.} Suppose that $b \in \mathbb{R}$. Show that the set of continuous real-valued functions $f$ on the interval $[0, 1]$ such that $\int_0^1 f = b$ is a subspace of $\mathbb{R}^{[0, 1]}$ iff b = 0. \\ \\
+	\textbf{Proof:} Denote the subspace of $\mathbb{R}^{[0, 1]}$ of continuous functions satisfying $\int_0^1 f = b$ as $U_b$.\\
+	Now, because $f \in U_b$ which is a subspace, then $kf \in U_b$. This can only be if $\int_0^1 kf = k\int_0^1 f = kb = b$, which is only the case iff $b = 0$. \\
+	We now prove the rest of the criteria for $U_b$ to be a subspace when $b = 0$. Take $f, g \in U_b$, we have $\int_0^1 f + g = \int_0^1 f + \int_0^1 g = 0 + 0 = 0$. Now take $f \in U_b$ s.t. $f = 0$, then we have $\int_0^1 f = 0$ as desired. Thus, $U_b$ is indeed a subspace iff $b = 0$. \\ \\
+	\textbf{Exercise 1.C.6.} \begin{itemize}
+		\textbf{a)} Is $\{(a, b, c) \in \mathbb{R}^3 : a^3 = b^3\}$ a subspace of $\mathbb{R}^3$? \\
+		\textbf{Answer:} Yes, since $a^3 = b^3$ iff $a = b$ in $\mathbb{R}$ and it's easy to see that it forms a subspace. \\
+		\textbf{b)} Is $\{(a, b, c) \in \mathbb{C}^3 : a^3 = b^3\}$ a subspace of $\mathbb{C}^3$? \\
+		\textbf{Answer:} No, consider the vectors $\big(-\sqrt[3]{-1}z_2, \frac{-1}{2}i(\sqrt{3}z_1 - iz_1), c\big)$ and $\big(\sqrt[3]{-1^2}z_2, \frac{1}{2}i(\sqrt{3}z_1 + iz_1), c\big)$, if we add them we find that $a^3 \neq b^3$.
+	\end{itemize}
+	\textbf{Exercise 1.C.8.} Give an example of a subset $U$ of $\mathbb{R}^2$ s.t. $U$ is closed under scalar multiplication, but $U$ is not a subspace of $\mathbb{R}^2$. \\ \\
+	\textbf{Answer:} Take the subset $U = \{(x, y) \in \mathbb{R} : x = 0 \text{ or } y = 0\}$. Clearly it is closed under scalar multiplication, yet if we take $u_1 = (1, 0), u_2 = (0, 1) \in U$ we can see that $u_1 + u_2 \not \in U$, thus, $U$ is not a subspace. \\ \\
+	\textbf{Exercise 1.C.11.} Prove that the intersection of any collection of subspaces of $V$ is a subspace of $V$. \\ \\
+	\textbf{Proof:} We'll start by examining the intersection of 2 subspaces of $U_1 \cap U_2 \subseteq V$. Since $0 \in U_1$ and $0 \in U_2$, then $0 \in U_1 \cap U_2$. Now, take any vector $u \in U_1 \cap U_2$, since this vector exists in both subspaces then any scalar multiple of it $ku$ is also in both subspaces, thus, $ku \in U_1 \cap U_2$. Finally, take any two vectors $u_1, u_2 \in U_1 \cap U_2$, it is easy to see that since $u_1 + u_2$ exists in both subspaces then so must it exist in $U_1 \cap U_2$. \\
+	This proves that the intersection of any 2 subspaces yields another subspcae, to prove this for the general case we proceed by induction, i.e., $U = U_1 \cap U_2$, which is a subspace, and then take its intersection with another subspace $U_3$ and proceed inductively from there, sitting $U = U \cap U_n$. \\ \\
+	\textbf{Exercise 1.C.12.} Prove that the union of two subspaces of $V$ is a subspace of $V$ iff one of them is contained in the other. \\ \\
+	\textbf{Proof:} It is easy to see that $U \cup W$ has the $\mathbf{0}$ element and all the scalar multiples of any vector in $U$ or $W$, thus we are left with checking the the closure of addition. Suppose $U \cup W$ is a subspace and $U \nsubseteq W$ and $W \nsubseteq U$. Now, take $u \in U \backslash W$ and $w \in W \backslash U$, since $U \cup W$ is a subspace, then $u + w \in U \cup W$. Now, either $u + w \in U$ or $u + w \in W$. If $u + w \in U$, then $u + w - u = w \in U$, which is a contradiction, and if $u + w \in W$, then $u + w - w = u \in W$, which is, again, a contradiciton. So, either $U \subseteq W$ or $W \subseteq U$, in either case we can see that the result of the union is the bigger set which is already, by assumption, a subspace. \\ \\
+	\textbf{Exercise 1.C.17.} Is the operation of addition on the subspaces of $V$ associative? In other words, if $U_1, U_2, U_3$ are subspaces of $V$, is
+	$$(U_1 + U_2) + U_3 = U_1 + (U_2 + U_3)?$$
+	\textbf{Answer:} Yes, we first note that for any vectors $u_1 + (u_2 + u_3) = (u_1  + u_2) + u_3$. Now, we can easily see that any element $x + (y + z) \in U_1 + (U_2 + U_3)$ can be expressed by an element $(x + y) + z \in (U_1 + U_2) + U_3$ and the opposite is true, thus, $U_1 + (U_2 + U_3) = (U_1 + U_2) + U_3$. \\ \\
+	\textbf{Exercise 1.C.18.} Does the operation of addition on the subspace of $V$ have an additive identity? Which subspaces have additive inverses? \\ \\
+	\textbf{Answer:} Yes, the additive identity in this case would be the zero vector $\mathbf{0}$ which is trivially a subspace of $V$. For a subspace $U$ to have an additive inverse then $U + W = 0$ which is only the case if $U = W = 0$. \\ \\
+\end{document}

@@ -1,0 +1,31 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb}
+\title{\textbf{1.B Definition of a Vector Space}}
+\begin{document}
+	\maketitle
+	\textbf{Exercise 1.B.1.} Prove that $-(-v) = v$ for every $v \in V$. \\ \\
+	\textbf{Proof:} By definition we have:
+		$$(-v) + (-(-v)) = 0 \quad \text{and} \quad (-v) + v = 0$$
+	This implies that both $v$ and $-(-v)$ are additive invereses to $-v$, by the uniqueness of additive inverses, we have $v = -(-v)$. \\ \\
+	\textbf{Exercise 1.B.5.} Show that in the definition of a vector space (1.19), the additive inverse condition can be replaced with the condition that 
+		$$0v = \mathbf{0}.$$
+		\textbf{Proof:} $\Longrightarrow$ If we assume $0v = \mathbf{0}$ then we can see that $v + (-v) = 1v + (-1)v = (1 + (-1))v = 0v = \mathbf{0}$.\\ 
+		$\Longleftarrow$ If we assume the additive inverse then we can see that $0v = (1 + (-1))v = v + (-v) = \mathbf{0}$. \\ \\
+	\textbf{Exercise 1.B.6.} Let $-\infty$ and $\infty$ denote two distinct objects, neither of which is in $\mathbb{R}$. Define an addition and scalar multiplication on $\mathbb{R} \cup \{-\infty\} \cup \{\infty\}$ as you could guess from the notation. Specifically, the sum and product of two real numbers is as usual, and for $t \in \mathbb{R}$ define
+		$$t\infty =
+			\begin{cases}
+				-\infty & t < 0, \\
+				0 & t = 0, \\
+				\infty & t > 0,
+			\end{cases} \quad
+		t(-\infty) =
+			\begin{cases}
+				\infty & t < 0 \\
+				0 & t = 0 \\
+				-\infty & t > 0
+			\end{cases}$$
+		$$t + \infty = \infty + t = \infty, \quad t + (-\infty) = (-\infty) + t = -\infty,$$
+		$$\infty + \infty = \infty, \quad (-\infty) + (-\infty) = -\infty, \quad \infty + (-\infty) = 0.$$
+	Is $\mathbb{R} \cup \{\infty\} \cup \{-\infty\}$ a vector space over $\mathbb{R}$? Explain. \\ \\
+	No, consider $\infty = (2 + (-1))\infty = 2\infty + (-\infty) = \infty + (-\infty) = 0$, which is a contradiction.
+\end{document}
