@@ -13,10 +13,10 @@ Will continue updating the list of courses and books as I branch out to other to
 
 * [Abstract Algebra, 3rd Edition](https://www.amazon.com/Abstract-Algebra-3rd-David-Dummit/dp/0471433349/ref=sr_1_4?s=books&ie=UTF8&qid=1519221563&sr=1-4&keywords=Abstract+Algebra) -David S. Dummit, Richard M. Foote
 
-* [Linear Algebra Done Right, 3rd Edition](https://www.springer.com/gp/book/9783319110790)
+* [Linear Algebra Done Right, 3rd Edition](https://www.springer.com/gp/book/9783319110790) -Sheldon Axler
 ## Acknowledgments
 Thanks to the following professors that uploaded their courses online, which in turn help other people like me who want to self-study these topics. :)
 
 * [Professor John Voight](https://math.dartmouth.edu/~jvoight/index.html).
 
-Professor Kenneth A. Ribet.
+* [Professor Kenneth A. Ribet](https://math.berkeley.edu/~ribet/).
