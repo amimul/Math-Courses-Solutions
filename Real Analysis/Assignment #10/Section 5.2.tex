@@ -1,0 +1,47 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb}
+\title{\textbf{5.2 Derivatives and The Intermediate Value Property}}
+\begin{document}
+	\maketitle
+	\textbf{Exercise 5.2.2. a)} Use Definition 5.2.1 to produce the proper formulat for the derivative of $f(x) = \frac{1}{x}$. \\ \\
+	\textbf{Answer:} $f'(c) = \lim_{x \to c} \frac{f(x) - f(c)}{x - c} = \lim_{x \to c} \frac{\frac{1}{x} - \frac{1}{c}}{x - c} = \lim_{x \to c} \frac{c - x}{xc(x - c)} = \lim_{x \to c} \frac{-1}{xc} = \frac{-1}{c^2}$. \\ \\
+	\textbf{b)} Combine the result in part a) with the chain rule (Theorem 5.2.5) to supply a proof of part iv) of Theorem 5.2.4. \\ \\
+	\textbf{Proof:} Take $h(x) = \frac{1}{x}$, then we have $(h \circ g)(x) = \frac{1}{g(x)}$. By the chain rule and part a), we have $(h \circ g)'(x) = \frac{-g'(x)}{g(x)^2}$. \\
+	Now by part iii) of Theorem 5.2.4, we have 
+	\begin{align*}
+		\big(\frac{f}{g}\big)'(x) =  (f(x)(h \circ g)(x))' &= f'(x)(h \circ g)(x) + f(x)(h \circ g)'(x) \\
+								   &= \frac{f'(x)}{g(x)} - \frac{f(x)g'(x)}{g(x)^2} \\
+								   &= \frac{f'(x)g(x) - f(x)g'(x)}{g(x)^2}
+	\end{align*}
+	\textbf{Exercise 5.2.3.} By imitating the Dirichlet constructions in Section 4.1, construct a function on $\mathbb{R}$ that is differentiable at a single point. \\ \\
+	\textbf{Answer:} Take the function 
+		$$f(x) = \begin{cases}
+			x^2 & x \in \mathbb{Q} \\
+			0 & x \not \in \mathbb{Q}
+		\end{cases}$$
+	We can see that such a function is continuous at 0. Now, we have $h'(0) = \lim_{x \to 0} \frac{h(x)}{x}$. Given $\epsilon > 0$, take $\delta = \epsilon$. We have $\frac{|h(x)|}{|x|} < x$, we see that $\frac{|h(x)|}{|x|} < \epsilon$ when $|x| < \delta$ and thus $h$ is differentiable at 0 and $h'(0) = 0$. \\ \\
+	\textbf{Exercise 5.2.5.} Let
+		$$g_a(x) = \begin{cases}
+			x^a\sin(\frac{1}{x}) & \text{ if } x \geq 0 \\
+			0 & \text{ if } x < 0.
+		\end{cases}$$
+	Find a particular (potentially noninteger) value for $a$ so that
+	\begin{itemize}
+		\textbf{a)} $g_a$ is differentiable on $\mathbb{R}$ but such that $g_a'$ is unbounded on $[0, 1]$. \\
+		\textbf{Answer:} For $a = 0.5$ it's easy to see that the derivative blows up as it approaches 0.\\ \\
+		\textbf{b)} $g_a$ is differentiable on $\mathbb{R}$ with $g_a'$ continuous but not differentiable at zero. \\
+		\textbf{Answer:} For $a = 2.5$ the second derivative doesn't exist at 0. 
+	\end{itemize}
+	\textbf{Exercise 5.2.8.} Decide whether each conjecture is true or false. Provide an argument for those that are true and a counterexample for each one that is false.
+	\begin{itemize}
+		\textbf{a)} If a derivative function is not constant, then the derivative must take on some irrational values. \\
+		\textbf{Proof:} Since it satisfies the Intermediate Value Property and it has two distinct values, then it must attain every number in between, which also includes irrationals. \\ \\
+		\textbf{b)} If $f'$ exists on an open interval, and there is some point $c$ where $f'(c) > 0$, then there exists a $\delta$-neighborhood $V_\delta(c)$ around $c$ in which $f'(x) > 0$ for all $x \in V_\delta(c)$. \\
+		\textbf{Counterexample:} The function 
+		$$f(x) = \begin{cases}
+			\frac{x}{2} + x^2\sin(\frac{1}{x}) & \text{ if } x = 0 \\
+			0 & \text{ if } x \neq 0
+		\end{cases}$$
+		$f'(0) = \frac{1}{2}$ while $f'(x)$ is negative everywhere else. 
+	\end{itemize}
+\end{document}
