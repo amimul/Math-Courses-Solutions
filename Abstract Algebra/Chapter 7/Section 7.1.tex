@@ -1,0 +1,15 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb}
+\title{\textbf{7.1 Introduction to Rings}}
+\begin{document}
+	\maketitle
+	\textbf{Exercise 7.1.1.} Show that $(-1)^2 = 1$ in $R$. \\ \\
+	\textbf{Proof:} $(-1)(-1) = 1 \cdot 1 = 1$. \\ \\
+	\textbf{Exercise 7.1.2.} Prove that if $u$ is a unit in $R$ then so is $-u$. \\ \\
+	\textbf{Proof:} Since $u$ us a unit then there exists a multiplicative inverse $v$ of it. The multiplicative inverse, by the axioms of a group, must have an additive inverse and thus we have $-v \in R$. Now, since $(-u)(-v) = uv = 1$ then $-u$ is a unit.\\ \\
+	\textbf{Exercise 7.1.7.} The center of a ring $R$ is $\{ z \in R \;|\; zr = rz \text{ for all } r \in R \}$ (i.e., the set of all elements which commute with every element in $R$). Prove that the center of a ring is a subring that contains the identity. Prove that the center of a division ring is a field. \\ \\
+	\textbf{Proof:} To prove that the center is indeed a subring it suffices to show that it has the identity and is closed under addition and multiplication. We shall denote the center by $C$. Since $0, 1$ commutes with every element then $0, 1 \in C$. Consider any $x, y \in C$, it is easy to see that $xyz = zyx$ and $(x + y)z = xz + yz = zx + zy = z(x + y)$ for any $z \in C$, thus $C$ is closed under addition and multiplication and is indeed a subring. \\ 
+	Since for any $z \in C$ and $r \in R$ we have $zr = rz \iff zrz^{-1} = r \iff rz^{-1} = z^{-1}r$ then for any $C$ is a division ring. Now, since $C$ is a commutative division ring then it is a field. \\ \\
+	\textbf{Exercise 7.1.12.} Prove that any subring of a field which contains the identity is an integral domain. \\ \\
+	\textbf{Proof:} We shall denote the subring in question by $R$. Given that $R$ is a subring of a field then it is commutative and has no zero divisors, thus it is a an integral domain.
+\end{document}
